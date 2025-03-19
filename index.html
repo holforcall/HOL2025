@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صفحة روابط عصرية</title>
+  <style>
+    body {
+      background: #f0f2f5;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 30px;
+    }
+    .link-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      max-width: 700px;
+      width: 100%;
+      flex: 1 1 45%;
+      box-sizing: border-box;
+      transition: 0.3s;
+    }
+    .link-card:hover {
+      transform: translateY(-5px);
+    }
+    .link-button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin-bottom: 20px;
+      margin-right: 37%;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    .link-button:hover {
+      background-color: #388e3c;
+    }
+    .description {
+      color: #555;
+      margin: 15px 0;
+      font-size: 16px;
+    }
+    .images-row {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .image-box {
+      width: 120px;
+      text-align: center;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .image-box img,
+    .image-box video {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .image-caption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #444;
+    }
+    @media (max-width: 768px) {
+      .link-card {
+        flex: 1 1 100%;
+      }
+    }
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+      z-index: 999;
+    }
+    .lightbox-content img,
+    .lightbox-content video {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    .lightbox.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    نموذج تدريب أهم العناصر في تحصيل الديون
+  </div>
+
+ 
+   <!-- Main Content -->
+   <div class="main-container">
+    <!-- Card 1 -->
+    <div class="link-card">
+      <a href="https://eservices.moj.gov.kw/searchPages/searchCases.jsp" class="link-button" target="_blank">موفع بوابة العدل</a>
+      <p class="description">موقع وازرة العدل الكويتيه هو المكان اللى من خلاله بنقدر نعرف اى معلومات عن القضيه زى اية الاجراءات اللى على القضيه , سدد امتى اخر مرة وبنستخدم علشان نوصل للمعلومات دى الرقم الالى </p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/واجهه موقع وزارة العدل .png" alt="صورة 1">
+          <div class="image-caption">الواجهه الرئيسيه للموقع </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/الرقم الالى .png" alt="صورة 2">
+          <div class="image-caption">   الرقم الالى 
+           <br>
+            هو المكان اللى بنحط فيه الرقم الالى علشان نقدر ندخل على القضيه  </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/بيانات القضيه الكليه .png" alt="صورة 3">
+          <div class="image-caption"> بيانات القضيه الكلية 
+            <br>
+            بيكون فيها كل بيانات القضيه ومكان الملف بالمحكمه والاحكام والجلسات </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/اجراءات القضيه.png" alt="صورة 4">
+          <div class="image-caption">
+          اجراءات  القضايا
+            <br>
+            اجراءات القضيه هو المكان اللى بيكون فيه اجراءات المتخذه فى القضيه والاجراءات الماليه وخلافه  </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/مستجدات القضايا.png" alt="صورة 5">
+          <div class="image-caption">مستجدات القضايا 
+            <br>
+            هو المكان اللى بتكون فيه كل مستجدات القضيه اول باول وكل ما ينزل اجراء جديد بيظهرفى المستجدات 
+          </div>
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="link-card">
+      <a href="https://www.moi.gov.kw/main/eservices/residence/fines-enquiry?fineType=1&civilId=298010802562
+      4" class="link-button" target="_blank">  موقع وزارة الداخليه </a>
+      <p class="description"> هو  موقع بيخلينا نقدر نعرف اذا كان العميل داخل البلاد او لا اذا كان وافد لو كان خليجى او كويتى مش هنقدر نعرف </p>
+      <div class="images-row">
+        <div class="image-box"> 
+           ملحوظه مهمه الكويتى والخليجى مش بنقدر نعرف هو داخل او خارج البلاد</p>
+         
+        </div>
+        <div class="image-box">
+          <img src="IMG/واجهه الداخليه .png" alt="صورة 1">
+          <div class="image-caption">  دى الواجهه الرئيسيه للموقع احنا بنبحث بالرقم المدنى  ونبضغط استعلام بتظهر النتيجه الخاصه بالرقم المدنى</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/لو العميل وافد وداخل البلاد.png" alt="صورة 2">
+          <div class="image-caption">اذا كان العميل وافد وداخل البلاد
+            <br>
+              بعدادخال الرقم المدنى والضغط على استعلام هيظهر لا توجد غرامات </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/وافد وخارج البلاد.png" alt="صورة 3">
+          <div class="image-caption">اذا كان العميل خارج البلاد 
+            <br>
+            بعدادخال الرقم المدنى والضغط على استعلام هيظهر المذكور خارج البلاد 
+          </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/لو مخالف .png" alt="صورة 4">
+          <div class="image-caption">لو العميل مخالف 
+            <br>
+            بعدادخال الرقم المدنى والضغط على استعلام هيظهر عدد ايام مخالفه الاقامه  
+          </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/لو العميل كويتى .png" alt="صورة 5">
+          <div class="image-caption"> لو العميل كويتى او خليجى 
+              بعدادخال الرقم المدنى والضغط على استعلام هيظهر البيانات المدخلة غير صحيحة</div>
+
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="main-container">
+    <!-- Card 3 -->
+    <div class="link-card">
+      <a href="https://www.kcci.org.kw/newweb/home?jsessionID=1742295889.8951" class="link-button" target="_blank"> موقع وزارة التجارة والصناعه   </a>
+      <p class="description">  ده الموقع اللى من خلاله بنبحث عن اسم الشركه بيطلع بكل شى الرقم والعنوان واسم الشريك </p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/واجهه موقع التجارة والصناعه.png" alt="صورة 1">
+          <div class="image-caption"> دى واجهه الموقع اول ماندخل نضغط على البحث فى التراخيص علشان تدخلنا لاسم الشركه</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/لما بنضغط بحث عن التراخيص.png" alt="صورة 3">
+          <div class="image-caption">  بعد الضغط على البحث عن التراخيص بيظهر لنا  مربع بحث بنبث فيه باسم الشركه ولازم نخلى بالنا فى البحث يعنى ممكن نبدل الكلمه بالتاء المربوطة بدل الهاء وهكذا نبدل فى الحروف هتفرق فى البحث</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/النتيجه.png" alt="صورة 3">
+          <div class="image-caption"> دى النتيجه اللى بتظهر بعد البحث بتكون فيها كل حاجه رقم التليفون ونوع العضووالموقع الالكتروني والبريد الالكترونى و حاله العضوية</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/لما بضغط على اسم الشركه.png" alt="صورة 4">
+          <div class="image-caption"> لما بضغط على اسم الشركه بعد ما ظهر اسمها فى البحث بتظهر بياناتها </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/الشركاء.png" alt="صورة 5">
+          <div class="image-caption">  وكمان بيظهر الشركاء وملاك الشركه وجنسياتهم</div>
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="link-card">
+      <a href="https://insonline.moh.gov.kw/Insurance/loginAction;jsessionid=3C2E19FDC220EBCE5646C4FF0285C5B0" class="link-button" target="_blank">  موقع التامين الصحى </a>
+      <p class="description"> بنستفاد منه اية الموقع دة انه يعرفنى كفاله العميل وهتنتهى امتى </p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/واجهه التامين.png" alt="صورة 1">
+          <div class="image-caption">دى الواجهه الرئيسيه بندخل اليوزر نيم والباسوورد علشان نقدر ندخل على البيانات</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/نختار من قايمه نوع الخدمه وخانه نوع الاقامه.png" alt="صورة 2">
+          <div class="image-caption">بنختار من هنا نوع الخدمه  هنختار ضمان فردى </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/اختيار نوع الاقامه.png" alt="صورة 3">
+          <div class="image-caption">ومن هنا بنختار نوع الاقامه اللى غالبا بتكون رقم 18 و 22 </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/ندخل المدنى هنا .png" alt="صورة 4">
+          <div class="image-caption">دة المكان اللى بندخل فيه المدنيه علشان نبحث </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/كامل التامين.png" alt="صورة 5">
+          <div class="image-caption"> ودى الصورة النهائيه اللى بتظهر بيها كامل البيانات </div>
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+  </div> <div class="main-container">
+    <!-- Card 1 -->
+    <div class="link-card">
+      <a href="https://services.paci.gov.kw/card/inquiry" class="link-button" target="_blank"> موقع هيئه المعلومات المدنيه</a>
+      <p class="description">هو موقع اقدر من خلاله اعرف حاله البطاقه اية </p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/موقع هيئه المعلومات المدنيه.png" alt="صورة 1">
+          <div class="image-caption"> واجهه الموقع </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/وافد وخارج البلاد.png" alt="صورة 2">
+          <div class="image-caption"> لما يكون وافد وخارج البلاد بيظهر الجمله الموضحه بالصورة</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/قاربت على الانتهاء.png" alt="صورة 3">
+          <div class="image-caption">قاربت على الانتهاء معناها ان المدنيه صالحه لكن خلاص قربت تنتهى </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/لاغيه.png" alt="صورة 4">
+          <div class="image-caption">لاغيه يعنى خلاص انتهت واتلغت</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/صالحه.png" alt="صورة 5">
+          <div class="image-caption">لو صالحه </div>
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="link-card">
+      <a href="https://mconline.moh.gov.kw/onlinefr/onlineappointment?language=ar" class="link-button" target="_blank">موقع الصحه </a>
+      <p class="description"> بنستخدمه علشان نعرف الاسم الكامل للعميل </p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/الاسم.png" alt="صورة 1">
+          <div class="image-caption">بندخل الرقم المدنى فى الخانه المخصصه الظاهرة فى الصورة  </div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 2 - خطوة 2</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 3 - خطوة 3</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 4 - خطوة 4</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 5 - خطوة 5</div>
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+  </div> <div class="main-container">
+    <!-- Card 1 -->
+    <div class="link-card">
+      <a href="#" class="link-button" target="_blank">موقع Example 1</a>
+      <p class="description">شرح الموقع الأول: يقدم خدمات تعليمية ممتازة في مجال البرمجة والتصميم.</p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 1 - خطوة 1</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 2 - خطوة 2</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 3 - خطوة 3</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 4 - خطوة 4</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 5 - خطوة 5</div>
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="link-card">
+      <a href="#" class="link-button" target="_blank">موقع Example 2</a>
+      <p class="description">شرح الموقع الثاني: يهتم بكل جديد في عالم التكنولوجيا والبرمجيات.</p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 1 - خطوة 1</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 2 - خطوة 2</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 3 - خطوة 3</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 4 - خطوة 4</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 5 - خطوة 5</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+  </div> <div class="main-container">
+    <!-- Card 1 -->
+    <div class="link-card">
+      <a href="#" class="link-button" target="_blank">موقع Example 1</a>
+      <p class="description">شرح الموقع الأول: يقدم خدمات تعليمية ممتازة في مجال البرمجة والتصميم.</p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 1 - خطوة 1</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 2 - خطوة 2</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 3">
+          <div class="image-caption">شرح 3 - خطوة 3</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 4">
+          <div class="image-caption">شرح 4 - خطوة 4</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 5">
+          <div class="image-caption">شرح 5 - خطوة 5</div>
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="link-card">
+      <a href="#" class="link-button" target="_blank">موقع Example 2</a>
+      <p class="description">شرح الموقع الثاني: يهتم بكل جديد في عالم التكنولوجيا والبرمجيات.</p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 1">
+          <div class="image-caption">شرح 1 - خطوة 1</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 2 - خطوة 2</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 3">
+          <div class="image-caption">شرح 3 - خطوة 3</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 4">
+          <div class="image-caption">شرح 4 - خطوة 4</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 5">
+          <div class="image-caption">شرح 5 - خطوة 5</div>
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+  </div> <div class="main-container">
+    <!-- Card 1 -->
+    <div class="link-card">
+      <a href="#" class="link-button" target="_blank">موقع Example 1</a>
+      <p class="description">شرح الموقع الأول: يقدم خدمات تعليمية ممتازة في مجال البرمجة والتصميم.</p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 1">
+          <div class="image-caption">شرح 1 - خطوة 1</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 2 - خطوة 2</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 3">
+          <div class="image-caption">شرح 3 - خطوة 3</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 4">
+          <div class="image-caption">شرح 4 - خطوة 4</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 5">
+          <div class="image-caption">شرح 5 - خطوة 5</div>
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="link-card">
+      <a href="#" class="link-button" target="_blank">موقع Example 2</a>
+      <p class="description">شرح الموقع الثاني: يهتم بكل جديد في عالم التكنولوجيا والبرمجيات.</p>
+      <div class="images-row">
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 1">
+          <div class="image-caption">شرح 1 - خطوة 1</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 2">
+          <div class="image-caption">شرح 2 - خطوة 2</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 3">
+          <div class="image-caption">شرح 3 - خطوة 3</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 4">
+          <div class="image-caption">شرح 4 - خطوة 4</div>
+        </div>
+        <div class="image-box">
+          <img src="IMG/images.png" alt="صورة 5">
+          <div class="image-caption">شرح 5 - خطوة 5</div>
+        </div>
+        <div class="image-box">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="image-caption">فيديو تعليمي</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content" id="lightbox-content"></div>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+
+    document.querySelectorAll('.image-box img, .image-box video').forEach(item => {
+      item.addEventListener('click', () => {
+        lightboxContent.innerHTML = item.tagName === 'VIDEO'
+          ? `<video src="${item.src}" controls autoplay></video>`
+          : `<img src="${item.src}" alt="Expanded Image">`;
+        lightbox.classList.add('show');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+    });
+  </script>
+</body>
+</html>
